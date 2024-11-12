@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="vendor/Bootstrap/css/bootstrap.css" rel="stylesheet">
+    <title>Contact Us</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: url("Images/Nature.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            min-height: calc(100vh - 50px); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-form {
+            background-color: rgba(252, 247, 247, 0.801);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 50px auto;
+            width: 90%;
+        }
+
+        .contact-form h3 {
+            text-align: center;
+            color: rgb(236, 157, 11);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-control:focus {
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            border-color: #f6a06b;
+        }
+        #menu-icon{
+                font-size: 35px;
+                color: rgb(252, 250, 248);
+                z-index: 10001;
+                cursor:pointer;
+                display: none;
+               
+            }
+            #menu-icon:hover{
+                transform:scale(1.1);
+                color:rgb(253, 202, 106);
+                border-color: rgb(253, 202, 106);
+            }
+
+
+        .btnContact {
+            width: 100%;
+            border-radius: 25px;
+            padding: 15px;
+            background: rgb(236, 157, 11);
+            border: none;
+            font-weight: bold;
+            font-size: 18px;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .btnContact:hover {
+            background: #d99311;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        background-color: rgb(37, 37, 37);
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      a:hover {
+        color: rgb(236, 157, 11);
+      }
+      .nav a.active{
+            color: rgb(236, 157, 11);;
+        }
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .contact-form {
+                width: 90%;
+                margin: 60px auto;
+                padding: 30px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .nav a {
+                font-size: 18px;
+                padding: 8px 15px;
+            }
+        }
+        @media (max-width: 768px) {
+        .nav {
+        display: none; /* Hide nav by default on mobile */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        width: 100%;
+        position: absolute; /* Position nav inside the header */
+        background-color: rgb(37, 37, 37);
+    }
+     .nav.active {
+        display: flex; /* Show nav when active */
+    }
+      #menu-icon {
+        display: block; /* Show the menu icon on mobile */
+        position: absolute;
+        right: 20px;
+        top: 20px; /* Position menu icon within header */
+    }
+}
+
+
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: 20px;
+                width: 95%;
+                margin: 20px auto;
+            }
+
+            .form-control {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+
+            .btnContact {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .nav a {
+                font-size: 16px;
+            }
+
+            .footer {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            .contact-form {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            .form-control {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
+            .btnContact {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .footer {
+                font-size: 12px;
+                padding: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="menu-icon" class="bx bx-menu" onclick="toggleMenu()"></div>
+    <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <div class="contact-form">
+            <form method="post">
+                <h3>Get in Touch with Us</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="txtName" class="form-control" placeholder="Enter Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="txtEmail" class="form-control" placeholder="Enter Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtPhone" class="form-control" placeholder="Enter Your Phone Number">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea name="txtMsg" class="form-control" placeholder="Enter Your Message" rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <input type="submit" name="btnSubmit" class="btnContact" value="Send Message">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+       let menu = document.querySelector("#menu-icon");
+
+function toggleMenu(){
+    let navmenu = document.getElementById("nav");
+    navmenu.style.display = navmenu.style.display === 'flex' ? 'none' : 'flex';
+}
+
+    </script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="vendor/Bootstrap/js/bootstrap.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

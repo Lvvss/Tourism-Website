@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="vendor/Bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Travel and Tourism</title>
+</head>
+<body>
+    <div class="home">
+        <div id="menu-icon" class="bx bx-menu" onclick="toggleMenu()"></div>
+        <img class="home-img" src="Images/home.jpeg" alt="Home Image" class="img-fluid">
+    
+        <div class="nav" id="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="events.html">Events</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+           
+        <!-- Search Container -->
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for places and more">
+            <button id="search-button">
+                <i class='bx bx-search'></i>
+            </button>
+        </div>
+        
+        <div class="content">
+            <h3 style="color:rgb(236, 157, 11); letter-spacing: 2px; font-weight: 400;">Turn Every Mile into a Memory!</h3>
+            <h1 style="color: white; font-size: 80px;">Incredible India!</h1>
+            <a href="about.html"><button style="color: white; background-color:rgb(236, 157, 11);font-weight: bold; font-size: 16px; border-radius: 30px; border: none; padding: 8px 35px 10px; letter-spacing: 2px; margin-top: 20px; cursor: pointer;">EXPLORE</button></a>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button> 
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button> 
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="3"></button> 
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="4"></button> 
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="5"></button> 
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="7"></button> 
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="8"></button>  
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Slider/Tajmahal.jpg" class="d-block w-100" alt="Carousel 1" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/Ladakh.jpg" class="d-block w-100" alt="Carousel 2" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/Hawa-Mahal.jpg" class="d-block w-100" alt="Carousel 3" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/Varanasi.jpg" class="d-block w-100" alt="Carousel 4" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/Mysorepalace.jpg" class="d-block w-100" alt="Carousel 5" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/Andaman.jpg" class="d-block w-100" alt="Carousel 6" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/Kerala.jpeg" class="d-block w-100" alt="Carousel 7" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/Meghalaya.jpeg" class="d-block w-100" alt="Carousel 8" style="max-height: 100vh;">
+            </div>
+            <div class="carousel-item">
+                <img src="Slider/munnar.jpeg" class="d-block w-100" alt="Carousel 9" style="max-height: 100vh;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <script>
+       let menu = document.querySelector("#menu-icon");
+
+                function toggleMenu(){
+            let navmenu = document.getElementById("nav");
+            navmenu.style.display = navmenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+       
+
+
+       
+    </script>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="vendor/Bootstrap/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
